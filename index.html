@@ -1,1 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câmara Escura - O Princípio da Fotografia</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">📷 Câmara Escura</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#o-que-e">O que é</a></li>
+                <li><a href="#funcionamento">Funcionamento</a></li>
+                <li><a href="#fisica">Física</a></li>
+                <li><a href="#historia">História</a></li>
+                <li><a href="#conclusao">Conclusão</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
 
+    <header id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Câmara Escura</h1>
+            <p>Descubra o princípio óptico que revolucionou a forma como vemos e capturamos imagens</p>
+            <a href="#o-que-e" class="btn-primary">Explorar</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800" alt="Câmara Escura Antiga">
+        </div>
+    </header>
+
+    <section id="o-que-e" class="section">
+        <div class="container">
+            <h2 class="section-title">O que é a Câmara Escura?</h2>
+            <div class="content-grid">
+                <div class="text-content">
+                    <p>A <strong>câmara escura</strong> (do latim <em>camera obscura</em>) é um dispositivo óptico que consiste em uma caixa ou ambiente completamente escuro com um pequeno orifício em um de seus lados.</p>
+                    <p>Quando a luz de uma cena externa passa através deste orifício, ela projeta uma imagem invertida da cena na parede oposta ao orifício. Este fenômeno ocorre devido à propagação retilínea da luz.</p>
+                    <p>Este princípio é a base de toda a fotografia moderna e foi fundamental para o desenvolvimento das câmeras fotográficas que conhecemos hoje.</p>
+                </div>
+                <div class="image-content">
+                    <img src="https://images.unsplash.com/photo-1452587925148-458421ad6268?w=600" alt="Princípio da Câmara Escura">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="funcionamento" class="section alt-bg">
+        <div class="container">
+            <h2 class="section-title">Como Funciona?</h2>
+            <div class="functioning-demo">
+                <div class="demo-container">
+                    <canvas id="cameraCanvas" width="800" height="400"></canvas>
+                </div>
+                <div class="controls">
+                    <h3>Demonstração Interativa</h3>
+                    <p>Ajuste os parâmetros para ver como a imagem se forma:</p>
+                    <div class="control-group">
+                        <label for="distance">Distância do Objeto:</label>
+                        <input type="range" id="distance" min="100" max="400" value="250">
+                        <span id="distanceValue">250px</span>
+                    </div>
+                    <div class="control-group">
+                        <label for="aperture">Tamanho do Orifício:</label>
+                        <input type="range" id="aperture" min="2" max="10" value="5">
+                        <span id="apertureValue">5px</span>
+                    </div>
+                    <button id="toggleAnimation" class="btn-secondary">Inverter Imagem</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="fisica" class="section">
+        <div class="container">
+            <h2 class="section-title">Método Físico e Fórmula</h2>
+            <div class="physics-content">
+                <div class="formula-box">
+                    <h3>Fórmula da Câmara Escura</h3>
+                    <div class="formula">
+                        <span class="fraction">
+                            <span class="numerator">h<sub>i</sub></span>
+                            <span class="denominator">h<sub>o</sub></span>
+                        </span>
+                        =
+                        <span class="fraction">
+                            <span class="numerator">d<sub>i</sub></span>
+                            <span class="denominator">d<sub>o</sub></span>
+                        </span>
+                    </div>
+                    <div class="formula-explanation">
+                        <p>Onde:</p>
+                        <ul>
+                            <li><strong>h<sub>i</sub></strong> = Altura da imagem projetada</li>
+                            <li><strong>h<sub>o</sub></strong> = Altura do objeto real</li>
+                            <li><strong>d<sub>i</sub></strong> = Distância do orifício à imagem (profundidade da câmara)</li>
+                            <li><strong>d<sub>o</sub></strong> = Distância do objeto ao orifício</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="physics-explanation">
+                    <h3>Princípios Físicos Envolvidos</h3>
+                    <div class="physics-grid">
+                        <div class="physics-card">
+                            <div class="icon">🔦</div>
+                            <h4>Propagação Retilínea</h4>
+                            <p>A luz viaja em linha reta em um meio homogêneo. Os raios luminosos cruzam-se no orifício, invertendo a imagem.</p>
+                        </div>
+                        <div class="physics-card">
+                            <div class="icon">📐</div>
+                            <h4>Semelhança de Triângulos</h4>
+                            <p>A relação entre os tamanhos e distâncias segue o princípio da semelhança de triângulos formados pelos raios de luz.</p>
+                        </div>
+                        <div class="physics-card">
+                            <div class="icon">🌓</div>
+                            <h4>Inversão da Imagem</h4>
+                            <p>Os raios que vêm da parte superior do objeto atingem a parte inferior da tela, e vice-versa, causando a inversão.</p>
+                        </div>
+                        <div class="physics-card">
+                            <div class="icon"></div>
+                            <h4>Difração</h4>
+                            <p>Orifícios muito pequenos causam difração, borrando a imagem. Existe um tamanho ideal para máxima nitidez.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="historia" class="section alt-bg">
+        <div class="container">
+            <h2 class="section-title">História e Inventores</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Aristóteles (384-322 a.C.)</h3>
+                        <p>Primeiro registro ocidental do fenômeno. Observou que a luz do sol passando por pequenas aberturas entre folhas projetava imagens circulares do sol, mesmo quando as aberturas eram de outras formas.</p>
+                    </div>
+                    <div class="timeline-image">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Aristotle_Altemps_Inv8575.jpg/440px-Aristotle_Altemps_Inv8575.jpg" alt="Aristóteles">
+                    </div>
+                </div>
+
+                <div class="timeline-item reverse">
+                    <div class="timeline-content">
+                        <h3>Ibn al-Haytham (Alhazen) (965-1040)</h3>
+                        <p>Cientista árabe considerado o verdadeiro "inventor" do estudo científico da câmara escura. Descreveu detalhadamente o fenômeno em seu "Livro da Óptica" e usou a câmara escura para estudar eclipses solares sem danificar os olhos.</p>
+                    </div>
+                    <div class="timeline-image">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Ibn_al-Haytham_%28Alhazen%29.jpg/440px-Ibn_al-Haytham_%28Alhazen%29.jpg" alt="Ibn al-Haytham">
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Leonardo da Vinci (1452-1519)</h3>
+                        <p>Descreveu a câmara escura em seus manuscritos e a usou como ferramenta para estudar perspectiva e desenho. Foi um dos primeiros a entender completamente o princípio óptico.</p>
+                    </div>
+                    <div class="timeline-image">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Leonardo_self.jpg/440px-Leonardo_self.jpg" alt="Leonardo da Vinci">
+                    </div>
+                </div>
+
+                <div class="timeline-item reverse">
+                    <div class="timeline-content">
+                        <h3>A Criação da Câmera Fotográfica (Séc. XIX)</h3>
+                        <p>No século XIX, inventores como Joseph Nicéphore Niépce, Louis Daguerre e William Henry Fox Talbot adaptaram a câmara escura adicionando materiais fotossensíveis, criando as primeiras câmeras fotográficas permanentes.</p>
+                    </div>
+                    <div class="timeline-image">
+                        <img src="https://images.unsplash.com/photo-1516961642265-531546e84af2?w=600" alt="Câmera Antiga">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="conclusao" class="section">
+        <div class="container">
+            <h2 class="section-title">Conclusão</h2>
+            <div class="conclusion-content">
+                <p>A câmara escura representa um dos marcos mais importantes na história da ciência e da arte. Este dispositivo simples, baseado apenas em uma caixa escura e um pequeno orifício, demonstrou princípios fundamentais da óptica que permanecem válidos até hoje.</p>
+                
+                <p>Desde as observações de Aristóteles até os experimentos de Alhazen, passando pelos estudos de Leonardo da Vinci e culminando na invenção da fotografia no século XIX, a câmara escura foi essencial para:</p>
+                
+                <ul class="conclusion-list">
+                    <li>Compreender a natureza da luz e sua propagação</li>
+                    <li>Desenvolver técnicas de perspectiva na arte</li>
+                    <li>Criar a base tecnológica para a fotografia moderna</li>
+                    <li>Permitir observações astronômicas seguras</li>
+                </ul>
+
+                <p>Hoje, embora tenhamos câmeras digitais sofisticadas, o princípio básico permanece o mesmo: controlar a entrada de luz para formar uma imagem. A câmara escura nos lembra que as maiores revoluções tecnológicas muitas vezes começam com observações simples da natureza.</p>
+
+                <div class="quote-box">
+                    <p>"A câmara escura é a prova de que a luz, em sua simplicidade, carrega o poder de criar imagens do mundo."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Câmara Escura - Projeto Educacional de Física Óptica</p>
+            <p>Desenvolvido para fins educacionais</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
