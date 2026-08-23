@@ -34,7 +34,22 @@
             <a href="#o-que-e" class="btn-primary">Explorar</a>
         </div>
         <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800" alt="Câmara Escura Antiga">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="cameraGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#2d2d2d;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#1a1a1a;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <rect x="50" y="80" width="300" height="180" rx="10" fill="url(#cameraGrad)" stroke="#d4af37" stroke-width="3"/>
+                <circle cx="200" cy="170" r="50" fill="#1a1a1a" stroke="#d4af37" stroke-width="3"/>
+                <circle cx="200" cy="170" r="35" fill="#2d2d2d" stroke="#d4af37" stroke-width="2"/>
+                <circle cx="200" cy="170" r="20" fill="#1a1a1a"/>
+                <rect x="150" y="100" width="100" height="30" rx="5" fill="#d4af37"/>
+                <circle cx="200" cy="115" r="8" fill="#1a1a1a"/>
+                <rect x="80" y="260" width="40" height="20" rx="3" fill="#d4af37"/>
+                <rect x="280" y="260" width="40" height="20" rx="3" fill="#d4af37"/>
+            </svg>
         </div>
     </header>
 
@@ -48,7 +63,13 @@
                     <p>Este princípio é a base de toda a fotografia moderna e foi fundamental para o desenvolvimento das câmeras fotográficas que conhecemos hoje.</p>
                 </div>
                 <div class="image-content">
-                    <img src="https://images.unsplash.com/photo-1452587925148-458421ad6268?w=600" alt="Princípio da Câmara Escura">
+                    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="400" height="300" fill="#f5f5f5"/>
+                        <rect x="100" y="50" width="200" height="200" fill="#2d2d2d" stroke="#d4af37" stroke-width="3"/>
+                        <circle cx="100" cy="150" r="8" fill="#d4af37"/>
+                        <rect x="250" y="80" width="40" height="140" fill="#1a1a1a" opacity="0.8"/>
+                        <text x="200" y="280" text-anchor="middle" font-family="Roboto" font-size="14" fill="#333">Princípio da Câmara Escura</text>
+                    </svg>
                 </div>
             </div>
         </div>
@@ -59,22 +80,27 @@
             <h2 class="section-title">Como Funciona?</h2>
             <div class="functioning-demo">
                 <div class="demo-container">
-                    <canvas id="cameraCanvas" width="800" height="400"></canvas>
+                    <canvas id="cameraCanvas" width="900" height="500"></canvas>
                 </div>
                 <div class="controls">
                     <h3>Demonstração Interativa</h3>
-                    <p>Ajuste os parâmetros para ver como a imagem se forma:</p>
+                    <p>Arraste o objeto ou use os controles:</p>
                     <div class="control-group">
                         <label for="distance">Distância do Objeto:</label>
-                        <input type="range" id="distance" min="100" max="400" value="250">
+                        <input type="range" id="distance" min="150" max="350" value="250">
                         <span id="distanceValue">250px</span>
                     </div>
                     <div class="control-group">
                         <label for="aperture">Tamanho do Orifício:</label>
-                        <input type="range" id="aperture" min="2" max="10" value="5">
-                        <span id="apertureValue">5px</span>
+                        <input type="range" id="aperture" min="3" max="12" value="6">
+                        <span id="apertureValue">6px</span>
                     </div>
-                    <button id="toggleAnimation" class="btn-secondary">Inverter Imagem</button>
+                    <div class="control-group">
+                        <label for="objectSize">Tamanho do Objeto:</label>
+                        <input type="range" id="objectSize" min="60" max="150" value="100">
+                        <span id="objectSizeValue">100px</span>
+                    </div>
+                    <button id="toggleRays" class="btn-secondary">Mostrar/Ocultar Raios</button>
                 </div>
             </div>
         </div>
@@ -106,6 +132,7 @@
                             <li><strong>d<sub>o</sub></strong> = Distância do objeto ao orifício</li>
                         </ul>
                     </div>
+                    <button id="calcExample" class="btn-secondary">Calcular Exemplo</button>
                 </div>
                 
                 <div class="physics-explanation">
@@ -148,7 +175,15 @@
                         <p>Primeiro registro ocidental do fenômeno. Observou que a luz do sol passando por pequenas aberturas entre folhas projetava imagens circulares do sol, mesmo quando as aberturas eram de outras formas.</p>
                     </div>
                     <div class="timeline-image">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Aristotle_Altemps_Inv8575.jpg/440px-Aristotle_Altemps_Inv8575.jpg" alt="Aristóteles">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="100" cy="80" r="40" fill="#d4af37" opacity="0.3"/>
+                            <circle cx="100" cy="80" r="35" fill="#f4d03f"/>
+                            <path d="M 85 75 Q 90 70 95 75" stroke="#333" stroke-width="2" fill="none"/>
+                            <path d="M 105 75 Q 110 70 115 75" stroke="#333" stroke-width="2" fill="none"/>
+                            <path d="M 90 90 Q 100 95 110 90" stroke="#333" stroke-width="2" fill="none"/>
+                            <rect x="80" y="120" width="40" height="60" rx="5" fill="#8b4513"/>
+                            <text x="100" y="195" text-anchor="middle" font-family="Playfair Display" font-size="12" fill="#333">Aristóteles</text>
+                        </svg>
                     </div>
                 </div>
 
@@ -158,7 +193,15 @@
                         <p>Cientista árabe considerado o verdadeiro "inventor" do estudo científico da câmara escura. Descreveu detalhadamente o fenômeno em seu "Livro da Óptica" e usou a câmara escura para estudar eclipses solares sem danificar os olhos.</p>
                     </div>
                     <div class="timeline-image">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Ibn_al-Haytham_%28Alhazen%29.jpg/440px-Ibn_al-Haytham_%28Alhazen%29.jpg" alt="Ibn al-Haytham">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="100" cy="80" r="40" fill="#d4af37" opacity="0.3"/>
+                            <circle cx="100" cy="80" r="35" fill="#f4d03f"/>
+                            <path d="M 85 75 Q 90 70 95 75" stroke="#333" stroke-width="2" fill="none"/>
+                            <path d="M 105 75 Q 110 70 115 75" stroke="#333" stroke-width="2" fill="none"/>
+                            <path d="M 90 90 Q 100 95 110 90" stroke="#333" stroke-width="2" fill="none"/>
+                            <rect x="80" y="120" width="40" height="60" rx="5" fill="#2d5a27"/>
+                            <text x="100" y="195" text-anchor="middle" font-family="Playfair Display" font-size="12" fill="#333">Alhazen</text>
+                        </svg>
                     </div>
                 </div>
 
@@ -168,7 +211,15 @@
                         <p>Descreveu a câmara escura em seus manuscritos e a usou como ferramenta para estudar perspectiva e desenho. Foi um dos primeiros a entender completamente o princípio óptico.</p>
                     </div>
                     <div class="timeline-image">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Leonardo_self.jpg/440px-Leonardo_self.jpg" alt="Leonardo da Vinci">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="100" cy="80" r="40" fill="#d4af37" opacity="0.3"/>
+                            <circle cx="100" cy="80" r="35" fill="#f4d03f"/>
+                            <path d="M 85 75 Q 90 70 95 75" stroke="#333" stroke-width="2" fill="none"/>
+                            <path d="M 105 75 Q 110 70 115 75" stroke="#333" stroke-width="2" fill="none"/>
+                            <path d="M 90 90 Q 100 95 110 90" stroke="#333" stroke-width="2" fill="none"/>
+                            <rect x="80" y="120" width="40" height="60" rx="5" fill="#8b4513"/>
+                            <text x="100" y="195" text-anchor="middle" font-family="Playfair Display" font-size="12" fill="#333">Da Vinci</text>
+                        </svg>
                     </div>
                 </div>
 
@@ -178,7 +229,13 @@
                         <p>No século XIX, inventores como Joseph Nicéphore Niépce, Louis Daguerre e William Henry Fox Talbot adaptaram a câmara escura adicionando materiais fotossensíveis, criando as primeiras câmeras fotográficas permanentes.</p>
                     </div>
                     <div class="timeline-image">
-                        <img src="https://images.unsplash.com/photo-1516961642265-531546e84af2?w=600" alt="Câmera Antiga">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="40" y="60" width="120" height="100" rx="5" fill="#2d2d2d" stroke="#d4af37" stroke-width="2"/>
+                            <circle cx="100" cy="110" r="25" fill="#1a1a1a" stroke="#d4af37" stroke-width="2"/>
+                            <circle cx="100" cy="110" r="15" fill="#2d2d2d"/>
+                            <rect x="70" y="70" width="60" height="15" rx="3" fill="#d4af37"/>
+                            <text x="100" y="195" text-anchor="middle" font-family="Playfair Display" font-size="12" fill="#333">Séc. XIX</text>
+                        </svg>
                     </div>
                 </div>
             </div>
